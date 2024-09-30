@@ -1,45 +1,69 @@
+:root {
+  --color: steelblue; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
 main {
   max-width: 840px;
   }
-  aside {
+aside {
     width: 20rem;
-    margin: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.2); /* 1 */
-    padding: 1rem;
-    background-color: #eee;
-    color: #333;
     text-align: center;
   }
-  aside img {
+aside img {
     width: 200px;
-    height: auto;
+    height: auto; 
   }
-  main img {
+aside h2 {
+    position: absolute;
+    top: 475px;
+    left: 85px;
+   }
+main img {
+    float: right;
     width: 200px;
     height: auto;
-    border: 1px solid steelblue;
+    border: 1px solid var(--color);
     padding: 2px;
     box-shadow: 0 0 30px gray;
   }
-  nav {
-    background-color: steelblue;
+nav {
+    background-color: var(--color);
     padding: 10px;
+    display: flex; /*added not from byu Use flexbox for layout */
+    justify-content: center; /*added not from byu Centers the links horizontally */
+    background-color: #4a90e2; /*added not from byu Example background color */
   }
-  nav a { 
+nav a { 
     color: white;
     display: block;
     padding: 20px;
+    text-decoration: none; /* added not from byu */
+    margin: 0 15px; /* added not from byu Adds space between links */
+    font-weight: 600; /* added not from byu Bold text for links */
   }
-  h1 {
-    color: steelblue;
-  }
-  p {
+h1 {
+    color: var(--color);
+}
+p {
     padding: 0;
   }
-  footer {
+footer {
     margin-top: 15px;
     border-top: 1px solid #000;
     text-align: center;
   }
   
-  
+  /* Class Selectors*/
+.box {
+    margin: 1rem;
+    border: 1px solid rgba(0, 0, 0, 1);
+    padding: 1rem;
+    background-color: #eee;
+    color: #333;
+  }
