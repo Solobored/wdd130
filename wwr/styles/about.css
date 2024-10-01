@@ -1,0 +1,142 @@
+/* Define CSS variables in :root based on your site plan */
+:root {
+  --primary-color: #19381F; /* Example primary color */
+  --secondary-color: #91CB3E; /* Example secondary color */
+  --heading-color: #4C934C; /* Heading color */
+  --text-color: #333; /* Main text color */
+  --background-color: #f4f6f6; /* Background color */
+  --hero-bg-opacity: rgba(255, 255, 255, 0.8); /* Background color for hero article */
+  --link-color: #EEE82C; /* Link color */
+  --footer-bg-color: #4C934C; /* Footer background color */
+  --footer-text-color: #EEE82C; /* Footer text color */
+}
+
+/* General Styles */
+body {
+  font-family: 'Pangolin', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  max-width: 1200px;
+  margin: auto; /* Limit the entire width of the page */
+  line-height: 1.6;
+}
+
+h1, h2 {
+  color: var(--heading-color);
+  font-family: 'New Amsterdam', serif;
+}
+
+p {
+  color: var(--text-color);
+}
+
+img {
+  max-width: 100%; /* Make images responsive */
+}
+
+/* Header styles */
+header {
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 0 50px;
+  font-size: 24px;
+  
+}
+
+header .logo img {
+  max-width: 200px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--link-color);
+  font-weight: bold;
+}
+
+/* Hero section styling */
+.hero {
+  position: relative;
+  margin-bottom: 0px;
+}
+
+.hero img {
+  width: 100%;
+  display: block; /* Ensure image fills container */
+}
+
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  left: 280px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  font-size: 60px;
+}
+
+.hero article {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  background-color: var(--hero-bg-opacity);
+  padding: 20px;
+  max-width: 700px;
+}
+
+.hero article img {
+  float: right;
+  margin-left: 20px;
+  width: 150px;
+}
+
+/* Section styles */
+section {
+  padding: 20px;
+  font-size: 25px;
+}
+
+.adventure-gallery {
+  display: relative;
+  gap: 20px;
+}
+
+.adventure-gallery img {
+  max-width: calc(50% - 20px); /* Responsive images within the gallery */
+}
+
+/* Footer styles */
+footer {
+  background-color: var(--footer-bg-color);
+  color: var(--footer-text-color);
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+footer a img {
+  vertical-align: middle;
+  margin: 0 10px;
+  width: 50px; /* Set the width to 300 pixels */
+  height: auto; /* Height adjusts automatically */
+}
+
+footer a {
+  text-decoration: none; /* Remove underline from social media icons */
+}
