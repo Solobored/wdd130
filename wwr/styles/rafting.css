@@ -1,13 +1,13 @@
 :root {
-  --primary-color: #19381F;
-  --secondary-color: #91CB3E;
-  --heading-color: #4C934C;
-  --text-color: #333;
-  --background-color: #f4f6f6;
+  --primary-color: #005f73;
+  --secondary-color: #005f73;
+  --heading-color: #0a9396;
+  --text-color: #001219;
+  --background-color: #e9d8a6;
   --hero-bg-opacity: rgba(255, 255, 255, 0.8);
-  --link-color: #EEE82C;
-  --footer-bg-color: #4C934C;
-  --footer-text-color: #EEE82C;
+  --link-color: #ee9b00;
+  --footer-bg-color: #005f73;
+  --footer-text-color: #F5F5DC;
 }
 
 /* General Styles */
@@ -213,7 +213,7 @@ footer {
   display: flex;
   justify-content: space-between;
   background-color: var(--footer-bg-color);
-  color: var(--footer-text-color);
+  color: #F5F5DC;
   align-items: center;
   padding: 20px;
   text-align: center;
@@ -222,6 +222,7 @@ footer {
 footer p {
   font-size: 1rem;
   margin-bottom: 10px;
+  color: var(--footer-text-color);
 }
 
 footer .social-icons {
