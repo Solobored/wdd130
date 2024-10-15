@@ -16,7 +16,7 @@ body {
   font-weight: 400;
   background-color: var(--background-color);
   color: var(--text-color);
-  margin: 0;
+  margin: auto;
   max-width: 1200px;
   margin: auto;
   line-height: 1.6;
@@ -73,10 +73,11 @@ nav ul li a {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 nav ul li a:hover {
-  background-color: var(--secondary-color); /* Change background on hover for emphasis */
-  color: #fff; /* White text on hover for contrast */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Slight shadow on hover */
+  background-color: var(--secondary-color); 
+  color: #fff; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
 }
+
 /* General Div Styling */
 div {
   margin: 20px 0;
@@ -127,6 +128,7 @@ div:hover {
   padding: 5px;
 }
 
+/* Container for responsive layout */
 .container {
   display: flex;
   justify-content: space-between;
@@ -206,6 +208,82 @@ section p {
   padding: 3px;
   text-align: center;
   border-radius: 5px;
+}
+
+/* Employee Profiles */
+.employee-profiles {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; 
+}
+
+.employee-profiles figure {
+  text-align: center;
+  flex: 1 1 calc(33.333% - 40px); 
+  margin-bottom: 20px;
+}
+
+.employee-profiles img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Form Styles */
+form {
+  display: grid;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--form-bg-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--box-shadow-color);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  color: var(--text-color);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.submit-btn {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: var(--button-hover-color);
+}
+
+.submit-btn:focus {
+  outline: 2px solid var(--button-hover-color);
+  outline-offset: 2px;
 }
 
 /* Footer styles */
