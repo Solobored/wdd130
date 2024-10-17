@@ -38,13 +38,14 @@ img {
 
 /* Header styles */
 header {
-  display: grid;
-  grid-template-columns: 1fr auto;
+  display: flex; 
+  justify-content: space-between;
   align-items: center;
   background-color: var(--primary-color);
   padding: 20px 50px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   z-index: 1000;
+  height: 150px;
 }
 
 .logo img {
@@ -87,17 +88,20 @@ div {
 div:hover {
   transform: scale(1.05);
 }
+.adventure-gallery figure:hover,
+.employee-profiles figure:hover {
+  transform: scale(1.02); /* Subtle hover effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
 /* Hero section styling */
 .hero {
   position: relative;
-  overflow: hidden;
   margin-bottom: 30px;
 }
 
 .hero img {
   width: 100%;
-  display: block;
   display: block;
   border-radius: 10px;
 }
@@ -105,7 +109,7 @@ div:hover {
 .hero h1 {
   position: absolute;
   top: 20px;
-  left: 4vw; 
+  left: 20vw; 
   color: white;
   background-color: rgba(0, 0, 0, 0.7);
   padding: 10px;
@@ -114,18 +118,31 @@ div:hover {
 
 .hero article {
   position: absolute;
-  bottom: 50px;
-  left: 50px;
+  bottom: 200px;
+  left: 5vw;
   background-color: var(--hero-bg-opacity);
   padding: 20px;
-  width: 250px;
-  height: 525px;
+  width: 85%; 
+  height: auto; 
+  align-items: center; 
+  justify-content: space-between; 
+  border-radius: 10px;
+  display: flexbox;
+  font-size: larger;
+}
+
+.hero article p {
+  margin: 0;
+  font-size: 1.2rem; 
+  color: var(--text-color); 
+  max-width: 60%; 
 }
 
 .hero article img {
+  width: auto; 
+  height: 200px; 
+  object-fit: cover; 
   float: right;
-  width: 250px;
-  padding: 5px;
 }
 
 /* Container for responsive layout */
@@ -158,6 +175,8 @@ section {
   border-bottom: 3px solid var(--heading-color); 
   text-align: center; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  max-width: 1200px;
+  margin: 0 auto; 
 }
 section h2 {
   font-size: 2.5rem; 
@@ -176,10 +195,11 @@ section p {
 /* Adventure Gallery */
 .adventure-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
   gap: 20px;
+  justify-items: center;
   margin-top: 20px;
-  transition: transform 0.3s ease-in-out;
+  padding: 0 10px;
 }
 .adventure-gallery figure:hover {
   transform: scale(1.05);
@@ -233,25 +253,27 @@ section p {
 
 /* Form Styles */
 form {
+ text-align: left;
   display: grid;
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: var(--form-bg-color);
+  background-color: #f9f1e7; /* Light background similar to second image */
   border-radius: 10px;
-  box-shadow: 0 4px 8px var(--box-shadow-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border: 1px solid #ccc; /* Add a light border for a subtle effect */
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 label {
   font-weight: bold;
   margin-bottom: 5px;
   display: block;
-  color: var(--text-color);
+  color: #333; /* Darker text color */
 }
 
 input[type="text"],
@@ -259,14 +281,22 @@ input[type="email"],
 textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid var(--border-color);
+  border: 1px solid #ccc; /* Change the border color */
   border-radius: 5px;
   font-size: 1rem;
-  color: var(--text-color);
+  color: #333;
+  background-color: #fff; /* Ensure input background is white */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #0a9396; /* Add a focus border color */
+  outline: none;
 }
 
 .submit-btn {
-  background-color: var(--secondary-color);
+  background-color: #0a9396; /* Darker green background */
   color: white;
   padding: 10px 20px;
   font-size: 1rem;
@@ -275,15 +305,32 @@ textarea {
   border-radius: 5px;
   cursor: pointer;
   width: 100%;
+  transition: background-color 0.3s ease; /* Smooth transition */
 }
 
 .submit-btn:hover {
-  background-color: var(--button-hover-color);
+  background-color: #005f73; /* Darken on hover */
 }
 
 .submit-btn:focus {
-  outline: 2px solid var(--button-hover-color);
+  outline: 2px solid #005f73; /* Add outline on focus */
   outline-offset: 2px;
+}
+
+.checkbox-group {
+  display: flex;
+ 
+  gap: 10px; /* Space between the checkbox and label */
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.checkbox-group label {
+  display: inline;
+  font-weight: normal;
+  font-size: 1rem;
 }
 
 /* Footer styles */
