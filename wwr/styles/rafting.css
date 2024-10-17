@@ -127,7 +127,6 @@ div:hover {
   align-items: center; 
   justify-content: space-between; 
   border-radius: 10px;
-  display: flexbox;
   font-size: larger;
 }
 
