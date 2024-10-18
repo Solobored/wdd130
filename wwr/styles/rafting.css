@@ -53,7 +53,11 @@ header {
 	max-width: 180px;
 	height: auto;
   filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.3));
-} 
+}
+
+a {
+  color: #f4f6f6;
+}
 
 nav ul {
   list-style: none;
