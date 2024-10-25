@@ -456,33 +456,70 @@ textarea:focus {
   font-size: 1rem;
 }
 
-/* Trips page section */
-.trip-details { 
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  margin: 40px 0;
-}
-
-.trip {
+/* General styling for the section */
+.trip-details {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
   text-align: center;
 }
 
+/* Styling for the section title */
+.trip-details h2.donut {
+  font-size: 2.5em;
+  color: #0044cc;
+  margin-bottom: 40px;
+  grid-column: 1 / -1; /* Ensures it takes up the full width */
+}
+
+/* Styling for each trip article */
+.trip {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.trip:hover {
+  transform: translateY(-10px);
+}
+
+/* Styling for the images */
 .trip img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
 }
 
+/* Styling for trip titles */
 .trip h2 {
-  font-size: 1.5rem;
-  color: var(--heading-color);
+  font-size: 1.8em;
+  margin-top: 15px;
+  color: #333;
 }
 
+/* Styling for trip descriptions */
 .trip p {
-  font-size: 1rem;
-  color: var(--text-color);
-  padding: 10px 20px;
+  font-size: 1.1em;
+  color: #666;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+/* Responsive grid layout */
+.trip-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+/* Ensure the title does not interfere with the layout */
+.trip-details h2.donut {
+  grid-column: 1 / -1;
 }
 
 .trip-summary table {
